@@ -1,15 +1,17 @@
 console.log("Welcome to the main module");
 import { createPotato } from "./seeds/potato.js";
 import { createPlan } from "./plan.js";
-import { addPlant } from "./field.js";
-import { usePlants } from "./field.js";
+import { addPlant, usePlants } from "./field.js";
+import { plantSeeds } from "./tractor.js";
 
+const yearlyPlan = createPlan()
 const potatoSeed = createPotato()
 
 addPlant(potatoSeed);
-const field = usePlants();
+
+const field = usePlants()
 
 console.log(field)
-const yearlyPlan = createPlan()
-console.log(yearlyPlan)
+
+plantSeeds(yearlyPlan)
 
